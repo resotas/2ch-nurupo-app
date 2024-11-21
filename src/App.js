@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 const App = () => {
-  const [messages, setMessages] = useState([]); // 初期メッセージを空に設定
-
+  const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
   const handleSend = () => {
@@ -15,13 +14,11 @@ const App = () => {
 	];
 
 	if (input.trim() === "ぬるぽ") {
-	  // 「ぬるぽ」の場合
 	  newMessages.push({
 		user: "AI＠ガッ職人",
 		text: getRandomGah(),
 	  });
 	} else {
-	  // それ以外の場合
 	  newMessages.push({
 		user: "AI＠ガッ職人",
 		text: getRandomResponse(),
@@ -52,6 +49,13 @@ const App = () => {
 
   return (
 	<div className="app">
+	  {/* 見出しとサブタイトル */}
+	  <header className="header">
+		<h1>ぬるぽガッアプリ</h1>
+		<p>ぬるぽキボンヌ</p>
+	  </header>
+
+	  {/* メッセージログ */}
 	  <div className="log">
 		{messages.map((msg, index) => (
 		  <div key={index} className="message">
@@ -60,6 +64,8 @@ const App = () => {
 		  </div>
 		))}
 	  </div>
+
+	  {/* 入力エリア */}
 	  <div className="input-container">
 		<input
 		  type="text"
