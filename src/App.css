@@ -1,0 +1,56 @@
+body {
+  font-family: "DotGothic16", monospace;
+  background-color: #f0f0f0;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.log {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.user {
+  color: green;
+}
+
+.text {
+  white-space: pre-wrap;
+}
+
+.input-container {
+  display: flex;
+}
+
+input {
+  flex: 1;
+  padding: 5px;
+  font-size: 14px;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
